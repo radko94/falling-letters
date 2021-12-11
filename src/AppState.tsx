@@ -56,7 +56,10 @@ export const eventsReducer = (
         ],
       };
     default:
-      return {
+      return action.payload.message ? {
+        ...state,
+        eventMessages: [...state.eventMessages, action.payload.message]
+      } : {
         ...state,
       };
   }

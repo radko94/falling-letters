@@ -114,8 +114,7 @@ const LettersField = (props: ILetterFieldProps): JSX.Element => {
           type: EEventActions.KEYDOWN_INVALID,
           payload: {
             message: EUserMessages.KEYDOWN_INVALID,
-            points: 0,
-          },
+          } as IEventActionPayload,
         });
 
         break;
